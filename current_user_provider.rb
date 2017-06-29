@@ -4,6 +4,6 @@ class ExCurrentUserProvider < Auth::DefaultCurrentUserProvider
   def log_on_user(user, session, cookies)
     super
 
-    cookies.permanent[TOKEN_COOKIE] = { value: user.auth_token, httponly: true, domain: '.indoorway.com' }
+    cookies.permanent[TOKEN_COOKIE] = { value: @user_token.unhashed_auth_token, httponly: true, domain: '.indoorway.com' }
   end
 end
