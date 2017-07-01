@@ -4,6 +4,6 @@
 # authors: ntauthority
 
 load File.expand_path("../current_user_provider.rb", __FILE__)
-load File.expand_path("../config/initializers/session_store", __FILE__)
+load File.expand_path("../config/initializers/session_store.rb", __FILE__)
 
 Discourse.current_user_provider = ExCurrentUserProvider
